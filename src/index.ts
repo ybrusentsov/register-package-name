@@ -40,7 +40,7 @@ fs.writeFileSync(
   JSON.stringify(packageJsonContent)
 );
 
-runCommand(`cd ${RESULT_FOLDER} && npm publish`)
+runCommand(`cd ${RESULT_FOLDER} && npm publish --tag dev`)
   .then(() => {
     console.log('Package published successfully.');
   })
